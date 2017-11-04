@@ -1,0 +1,19 @@
+{
+  "name": "exercises-f2f",
+  "version": "1.0.0",
+  "description": "Exercises for Frontend Masters Fundamentals to Functional v2",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgando/exercises-fundamentals-2-functional.git"
+  },
+  "author": "@bgando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgando/exercises-fundamentals-2-functional/issues"
+  },
+  "homepage": "https://github.com/bgando/exercises-fundamentals-2-functional#readme",
+}
