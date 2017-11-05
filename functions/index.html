@@ -12,17 +12,20 @@
 
     <script src="../lib/mocha.js"></script>
     <script src="../lib/chai.js"></script>
+    <script src="../lib/chai-spies.js"></script>
+
     <script>
       window.expect = chai.expect;
       mocha.setup('bdd');
     </script>
 
     <!-- src files -->
-    <script type="text/javascript" src="./addNumber.js"></script>
-    <!-- <script type="text/javascript" src="./promise1.js"></script> -->
+    <script type="text/javascript" src="./exercises-part2.js"></script>
+
     <!-- spec files -->
-    <script src="./addNumber.spec.js"></script>
-    <!-- <script src="./promise1.spec.js"></script> -->
+    <script src="./spec/exercises-part1.spec.js"></script>
+    <script src="./spec/exercises-part2.spec.js"></script>
+
 
     <script>
       mocha.run();
