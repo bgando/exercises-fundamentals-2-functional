@@ -1,11 +1,18 @@
 /* 
 1)
-Implement addFirstToThird so that it returns the sum of values at two 
-inputted indexes. Don't forget about that arrays are zero-based 
+Implement the function chooseMovieSnacks so it returns the statement
+'My favorite movie snacks are <snack1> and <snack2>'. 
+<snack1> and <snack2> value will depend on the parameter that are passed as arguments.
+
+Ex: 
+const snacks = ['peanuts', 'popcorn', 'hot dogs', 'candy', 'ice cream'];
+
+const favorites = chooseMovieSnacks(snacks, 1, 3);
+// favorites should read 'My favorite movies snacks are popcorn and candy.';
 */
-const addValuesAtIndexes = (arr, index1, index2) => {
+const chooseMovieSnacks = (arr, index1, index2) => {
   // YOUR CODE HERE
-  return arr[index1] + arr[index2];
+  return `My favorite movies snacks are ${arr[index1]} and ${arr[index2]}.`;
 };
 
 /* 
@@ -31,6 +38,7 @@ const getLunch = (menu) => {
 };
 
 /*
+3)
 Given an array of menu objects, return an array of the menu objects where the dinner
 property has a lowSugar equal to true.
 
@@ -60,7 +68,20 @@ const result = getLowSugarMenu(menuArr)
 // result should be an array contain only the tuesMenu object 
 */
 const getLowSugarMenu = (menuArr) => {
+  // YOUR CODE HERE
   return menuArr.filter(item => {
     return item.dinner.lowSugar === true;
+  });
+};
+
+/*
+4)
+Implement the function copyMenu below that passes all the menus and menu items
+by value. Changes to the new menu should not affect the old menu.
+*/
+const copyMenu = (menuArr) => {
+  // YOUR CODE HERE
+  return menuArr.map(item => {
+    return {...item};
   });
 };
