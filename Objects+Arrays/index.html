@@ -11,12 +11,15 @@
 
     <!-- *** Libraries *** -->
     <script src="../lib/mocha.js"></script>
-    <script src="../lib/babel.js"></script>
     <script src="../lib/chai.js"></script>
-    <script>mocha.setup('bdd');</script>
+    <script>
+      window.expect = chai.expect;
+      mocha.setup('bdd');
+    </script>
     
-    <!-- *** Exercises *** -->
-    <script src="01.spec.js"></script>
+    <!-- *** Code and Spec file *** -->
+    <script src="code.js"></script>
+    <script src="spec.js"></script>
 
     <script>
       mocha.run();
