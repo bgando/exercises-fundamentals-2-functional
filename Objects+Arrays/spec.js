@@ -14,10 +14,20 @@ describe('Objects', () => {
       lunch: 'pizza',
       dinner: 'super salad'
     };
-
+    
     const result = getLunch(tuesdayMenu);
     expect(result).to.equal('pizza');
   })
+  
+  it('should use the bracket notation for access when accessing a user-supplied property', () => {
+    const tuesdayMenu = {
+      breakfast: 'waffles',
+      lunch: 'pizza',
+      dinner: 'super salad'
+    };
+    const result = getMeal(tuesdayMenu, 'dinner');
+    expect(result).to.equal('super salad');
+  });
 })
 
 describe('Objects and Arrays', () => {
