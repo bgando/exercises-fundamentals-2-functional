@@ -12,7 +12,7 @@ describe('Currying', () => {
   });
 
   it(`allows you to supply less than the expected number of arguments, producing 
-    new functions that can be invoked at a later time.`, () => {
+    new functions that can be invoked at a later time`, () => {
       const functionWithTwoArgumentsExpected = solveWithMrGreen.length;
       const functionWithOneArgumentExpected = solveWithMrGreenAndCandlestick.length;
       const expected = 'It was Mr. Green with the Candlestick in the Hall.';
@@ -28,7 +28,7 @@ describe('Currying', () => {
 
 describe('Composition', () => {
   it('allows you to apply several functions sequentially to a set of data', () => {
-    const possibilities = [
+    const possibilitiesArr = [
       {
         name: 'Miss Scarlett',
         weapon: 'Wrench',
@@ -68,7 +68,7 @@ describe('Composition', () => {
         room: 'LIBRARY'
       },
     ]
-    const result = filterUpper(possibilities);
+    const result = filterUpper(possibilitiesArr);
     expect(result).to.be.an('array');
     expect(result[0].name).to.be.a('string');
     expect(result[0].name).to.equal('MISS SCARLETT');

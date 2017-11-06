@@ -12,6 +12,7 @@ const favorites = chooseMovieSnacks(snacks, 1, 3);
 */
 const chooseMovieSnacks = (arr, index1, index2) => {
   // YOUR CODE HERE
+  return `My favorite movies snacks are ${arr[index1]} and ${arr[index2]}.`;
 };
 
 /* 
@@ -33,6 +34,7 @@ const result = getLunch(mondayMenu) // result should equal 'sandwich'
 
 const getLunch = (menu) => {
   // YOUR CODE HERE
+  return menu['lunch'];
 };
 
 /*
@@ -53,6 +55,7 @@ const result = getMeal(mondayMenu, 'dinner') // result should equal 'sandwich'
 
 const getMeal = (menu, meal) => {
   // YOUR CODE HERE
+  return menu[meal];
 };
 
 /*
@@ -87,6 +90,9 @@ const result = getLowSugarMenu(menuArr)
 */
 const getLowSugarMenu = (menuArr) => {
   // YOUR CODE HERE
+  return menuArr.filter(item => {
+    return item.dinner.lowSugar === true;
+  });
 };
 
 /*
@@ -96,4 +102,7 @@ by value. Changes to the new menu should not affect the old menu.
 */
 const copyMenu = (menuArr) => {
   // YOUR CODE HERE
+  return menuArr.map(item => {
+    return {...item};
+  });
 };
