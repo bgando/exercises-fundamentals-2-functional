@@ -20,7 +20,7 @@
     myCounter.resetCounter()
     myCounter.showCount() === 0
 
-  Note: Counter's 'count' value should only be accessible
+  Reminder: Counter's 'count' value should only be accessible
         via our 'showCount' function. User's should not be able to modify
         'count' directly like this:
 
@@ -28,3 +28,26 @@
         myCounter.count = 1;
         myCounter.showCount() === 1 <--- we don't want this to work this way.
 */
+
+function Counter(userType){
+  var count = 0;
+  let result = {
+    increment: () => {
+      count++;
+    },
+    decrement: () => {
+      count--;
+    },
+    showCount: () => {
+      return count;
+    }
+  }
+
+  if(userType === 'admin'){
+    result.resetCounter = () => {
+      count = 0;
+    }
+  }
+
+  return result
+}
